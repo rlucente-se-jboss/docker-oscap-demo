@@ -4,5 +4,4 @@ RUN yum install -y openscap openscap-utils openscap-content scap-security-guide
 COPY govready.sh /root/
 RUN chmod +x /root/govready.sh
 RUN /root/govready.sh
-RUN ls /root/
-RUN govready scan
+
