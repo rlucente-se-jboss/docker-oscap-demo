@@ -1,6 +1,6 @@
 FROM centos:6.6
-CMD su -c 'rpm -Uvh http://download.fedoraproject.org/pub/epel/6/x86_64/epel-release-6-8.noarch.rpm'
-CMD yum install -y openscap openscap-utils openscap-content scap-security-guide
+RUN su -c 'rpm -Uvh http://download.fedoraproject.org/pub/epel/6/x86_64/epel-release-6-8.noarch.rpm'
+RUN yum install -y openscap openscap-utils openscap-content scap-security-guide
 COPY govready.sh /root/
-CMD chmod +x /root/govready.sh
+RUN chmod +x /root/govready.sh
 CMD /bin/bash govready.sh
