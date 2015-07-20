@@ -3,5 +3,5 @@ RUN su -c 'rpm -Uvh http://download.fedoraproject.org/pub/epel/6/x86_64/epel-rel
 RUN yum install -y openscap openscap-utils openscap-content scap-security-guide
 COPY govready.sh /root/
 RUN chmod +x /root/govready.sh
-RUN /bin/bash govready.sh
-CMD /bin/bash
+RUN /bin/bash /root/govready.sh
+
