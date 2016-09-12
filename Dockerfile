@@ -24,7 +24,8 @@ RUN    yum repolist --disablerepo=* \
 	   openscap \
            openscap-utils \
            openscap-content \
-           scap-security-guide
+           scap-security-guide \
+    && yum -y clean all \
 ADD govready.sh /root/
 ADD simple-script.sh /usr/local/bin
 RUN chmod 0700 /root/govready.sh
